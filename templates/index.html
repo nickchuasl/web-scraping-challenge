@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1><strong>Mission to Mars</strong></h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrap New Data</a></p>
+    </div>
+    
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        <h3><strong>Latest Mars News</strong></h3>
+        <h4><strong>{{mars.news_title}}</strong></h4>
+        <p>{{mars.news_p}}</p>
+       </div> 
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h3><strong>Featured Mars Image</strong></h3>
+          <img src= "{{mars.featured_image_url}}" alt="featured_image" width = 100% height = 100%>
+        </div>
+        <div class="col-md-6">
+          <h3><strong>Mars Facts</strong></h3>
+          
+          <table class="table table-striped" border = "2"> 
+            <thead> 
+              <tr style="text-align: right;"> 
+                <th></th> 
+                <th>Mars</th> 
+                <th>Earth</th> 
+              </tr> 
+  
+              <tr>
+                <th>Description</th> 
+                <th></th> 
+                <th></th> 
+              </tr> 
+              <tr>  
+                <th>Mars - Earth Comparison</th> 
+                <td>Mars</td> 
+                <td>Earth</td> 
+              </tr> 
+            </thead> 
+              <tbody> 
+                <tr> 
+                  <th>Diameter:</th> 
+                  <td>6,779 km</td> 
+                  <td>12,742 km</td> 
+                </tr> <tr> 
+                  <th>Mass:</th> 
+                  <td>6.39 × 10^23 kg</td> 
+                  <td>5.97 × 10^24 kg</td> 
+                </tr> <tr> 
+                  <th>Moons:</th> 
+                  <td>2</td> 
+                  <td>1</td> 
+                </tr> <tr> 
+                  <th>Distance from Sun:</th> 
+                  <td>227,943,824 km</td> 
+                  <td>149,598,262 km</td> 
+                </tr> <tr> 
+                  <th>Length of Year:</th> 
+                  <td>687 Earth days</td> 
+                  <td>365.24 days</td> 
+                </tr> <tr> 
+                  <th>Temperature:</th> 
+                  <td>-87 to -5 °C</td> 
+                  <td>-88 to 58°C</td> 
+                </tr> </tbody>
+              </table>
+          
+
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+          <h3><center><strong>Mars Hemispheres</strong></center></h3>
+          </div>
+          <br>
+          <br>
+          <hr>
+
+          <div class="col-md-3">
+            <div class="card" style="width: 25rem;">
+              <img src="{{mars.cerberus_img}}" alt="cerberus_image" width = 100% height = 100%>
+              <div class="card-body">
+                <p class="card-text"><strong>Cerberus Hemisphere Enhanced</strong></p>
+              </div>
+            </div>
+          </div> 
+
+    
+
+          <div class="col-md-3">
+            <div class="card" style="width: 25rem;">
+              <img src="{{mars.schiaparelli_img}}" alt="schiaparelli_image" width = 100% height = 100%>
+              <div class="card-body">
+                <p class="card-text"><strong>Schiaparelli Hemisphere Enhanced</strong></p>
+              </div>
+            </div>
+          </div> 
+          
+
+
+
+          <div class="col-md-3">
+            <div class="card" style="width: 25rem;">
+              <img src="{{ mars.syrtis_img}}" alt="syrtis_image" width = 100% height = 100%>
+              <div class="card-body">
+                <p class="card-text"><strong>Syrtis Major Hemisphere Enhanced</strong></p>
+              </div>
+            </div>
+          </div> 
+
+
+
+          <div class="col-md-3">
+            <div class="card" style="width: 25rem;">
+              <img src="{{ mars.valles_img}}" alt="valles_image" width = 100% height = 100%>
+              <div class="card-body">
+                <p class="card-text"><strong>Valles Marineris Hemisphere Enhanced</strong></p>
+              </div>
+            </div>
+          </div> 
+
+        </div>
+
+
+    </div>
+
+  </div>
+  </div>
+</body>
+
+</html>

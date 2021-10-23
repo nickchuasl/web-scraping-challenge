@@ -2,8 +2,8 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 1,
-   "id": "7bbe3773",
+   "execution_count": 32,
+   "id": "b538e68a",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -16,7 +16,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "9ccc9080",
+   "id": "ca755513",
    "metadata": {},
    "source": [
     "### NASA Mars News"
@@ -24,8 +24,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 21,
-   "id": "3c86a0ec",
+   "execution_count": 93,
+   "id": "bc1e93b9",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -58,10 +58,7 @@
     "\n",
     "\n",
     "    # Store data in a dictionary\n",
-    "    latest_news_data = {\n",
-    "        \"news_title\": news_title,\n",
-    "                        \"news_briefing\": news_p\n",
-    "    }\n",
+    "    latest_news_data = {\"news_title\": news_title,\"news_briefing\": news_p}\n",
     "\n",
     "    # Close the browser after scraping\n",
     "    browser.quit()\n",
@@ -72,7 +69,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "6ac97761",
+   "id": "bbd75fc9",
    "metadata": {},
    "source": [
     "### JPL Mars Space Images - Featured Image"
@@ -80,8 +77,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 30,
-   "id": "fe44348a",
+   "execution_count": 94,
+   "id": "745e982f",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -113,7 +110,7 @@
   },
   {
    "cell_type": "markdown",
-   "id": "cf0874c5",
+   "id": "74a7a1a8",
    "metadata": {},
    "source": [
     "### Mars Facts"
@@ -121,8 +118,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 2,
-   "id": "0e0aa859",
+   "execution_count": 33,
+   "id": "a565503c",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -131,8 +128,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 3,
-   "id": "1fb6a6f0",
+   "execution_count": 34,
+   "id": "5ca61631",
    "metadata": {},
    "outputs": [
     {
@@ -158,7 +155,7 @@
        " 8          Recorded By:           Egyptian astronomers]"
       ]
      },
-     "execution_count": 3,
+     "execution_count": 34,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -170,8 +167,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 4,
-   "id": "ed4d7a78",
+   "execution_count": 35,
+   "id": "a5612012",
    "metadata": {},
    "outputs": [
     {
@@ -180,7 +177,7 @@
        "list"
       ]
      },
-     "execution_count": 4,
+     "execution_count": 35,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -191,8 +188,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 5,
-   "id": "63ebf665",
+   "execution_count": 50,
+   "id": "c79943f5",
    "metadata": {},
    "outputs": [
     {
@@ -279,7 +276,7 @@
        "6             Temperature:     -87 to -5 °C      -88 to 58°C"
       ]
      },
-     "execution_count": 5,
+     "execution_count": 50,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -291,8 +288,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 6,
-   "id": "c7a86f0f",
+   "execution_count": 51,
+   "id": "7303335a",
    "metadata": {},
    "outputs": [
     {
@@ -372,7 +369,7 @@
        "6            Temperature:     -87 to -5 °C      -88 to 58°C"
       ]
      },
-     "execution_count": 6,
+     "execution_count": 51,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -384,8 +381,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 7,
-   "id": "237e2f31",
+   "execution_count": 53,
+   "id": "6516d2cf",
    "metadata": {},
    "outputs": [
     {
@@ -464,7 +461,7 @@
        "Temperature:                -87 to -5 °C      -88 to 58°C"
       ]
      },
-     "execution_count": 7,
+     "execution_count": 53,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -476,8 +473,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 8,
-   "id": "b4d2d181",
+   "execution_count": 54,
+   "id": "c5d904e8",
    "metadata": {},
    "outputs": [
     {
@@ -486,7 +483,7 @@
        "'<table border=\"1\" class=\"dataframe\">\\n  <thead>\\n    <tr style=\"text-align: right;\">\\n      <th></th>\\n      <th>Mars</th>\\n      <th>Earth</th>\\n    </tr>\\n    <tr>\\n      <th>Mars - Earth Comparison</th>\\n      <th></th>\\n      <th></th>\\n    </tr>\\n  </thead>\\n  <tbody>\\n    <tr>\\n      <th>Diameter:</th>\\n      <td>6,779 km</td>\\n      <td>12,742 km</td>\\n    </tr>\\n    <tr>\\n      <th>Mass:</th>\\n      <td>6.39 × 10^23 kg</td>\\n      <td>5.97 × 10^24 kg</td>\\n    </tr>\\n    <tr>\\n      <th>Moons:</th>\\n      <td>2</td>\\n      <td>1</td>\\n    </tr>\\n    <tr>\\n      <th>Distance from Sun:</th>\\n      <td>227,943,824 km</td>\\n      <td>149,598,262 km</td>\\n    </tr>\\n    <tr>\\n      <th>Length of Year:</th>\\n      <td>687 Earth days</td>\\n      <td>365.24 days</td>\\n    </tr>\\n    <tr>\\n      <th>Temperature:</th>\\n      <td>-87 to -5 °C</td>\\n      <td>-88 to 58°C</td>\\n    </tr>\\n  </tbody>\\n</table>'"
       ]
      },
-     "execution_count": 8,
+     "execution_count": 54,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -497,29 +494,8 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": 9,
-   "id": "9682c0bb",
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "'<table border=\"1\" class=\"dataframe\">  <thead>    <tr style=\"text-align: right;\">      <th></th>      <th>Mars</th>      <th>Earth</th>    </tr>    <tr>      <th>Mars - Earth Comparison</th>      <th></th>      <th></th>    </tr>  </thead>  <tbody>    <tr>      <th>Diameter:</th>      <td>6,779 km</td>      <td>12,742 km</td>    </tr>    <tr>      <th>Mass:</th>      <td>6.39 × 10^23 kg</td>      <td>5.97 × 10^24 kg</td>    </tr>    <tr>      <th>Moons:</th>      <td>2</td>      <td>1</td>    </tr>    <tr>      <th>Distance from Sun:</th>      <td>227,943,824 km</td>      <td>149,598,262 km</td>    </tr>    <tr>      <th>Length of Year:</th>      <td>687 Earth days</td>      <td>365.24 days</td>    </tr>    <tr>      <th>Temperature:</th>      <td>-87 to -5 °C</td>      <td>-88 to 58°C</td>    </tr>  </tbody></table>'"
-      ]
-     },
-     "execution_count": 9,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "html_table= html_table.replace('\\n', '')"
-   ]
-  },
-  {
    "cell_type": "markdown",
-   "id": "0db766d3",
+   "id": "442c28f0",
    "metadata": {},
    "source": [
     "### Mars Hemispheres"
@@ -528,7 +504,7 @@
   {
    "cell_type": "code",
    "execution_count": 80,
-   "id": "c2bc8fa2",
+   "id": "c7a59826",
    "metadata": {},
    "outputs": [],
    "source": [
@@ -631,14 +607,6 @@
     "    # Return results\n",
     "    return hemisphere_image_urls\n"
    ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "63530ef7",
-   "metadata": {},
-   "outputs": [],
-   "source": []
   }
  ],
  "metadata": {
