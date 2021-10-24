@@ -82,13 +82,43 @@ def scrape():
     df
 
     df = df.set_index(keys = "Mars - Earth Comparison")
-    df
+    
+    html_table = df.to_html('original_data_table.html')
+    import bs4
+    from bs4 import BeautifulSoup
+    from bs4.element import Tag
 
-    html_table = df.to_html()
+    # load the file
+    with open('original_data_table.html') as inf:
+        txt = inf.read()
+        soup = bs4.BeautifulSoup(txt)
 
-    html_table = html_table.replace('\n', '')
+    n_tags = soup.find_all("\n")
+        
+    for n_tag in n_tags:
+        n_tag.name = "" # replaces h2 tag with h1 
+        
+    # save the file again
+    with open("original_data_table.html", "w") as outf:
+        outf.write(str(soup))
+
+    # load the file
+    with open('original_data_table.html') as inf:
+        txt = inf.read()
+        soup = bs4.BeautifulSoup(txt)
+
+    tag = soup.table
+    tag['class'] = 'table table-striped'
+    tag['border'] = '2'
 
 
+    # save the file again
+    with open("original_data_table.html", "w") as outf:
+        outf.write(str(soup))
+
+    import codecs
+    file = codecs.open("original_data_table.html", "r", "utf-8")
+    html_table2 = file.read()
 
 
 # ### Mars Hemispheres
@@ -193,7 +223,7 @@ def scrape():
         "news_title": news_title,
         "news_p": news_p,
         "featured_image_url": featured_image_url,
-        "html_table": html_table,
+        "html_table2": html_table2,
         "cerberus_img": cerberus_img,
         "schiaparelli_img": schiaparelli_img,
         "syrtis_img": syrtis_img,
